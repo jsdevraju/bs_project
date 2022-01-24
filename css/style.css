@@ -49,6 +49,7 @@ h1,h2,h3,h4,h5,h6, a, span, p{
 }
 .navbar.bgcolor{
     background-color: #fff;
+    box-shadow: 2px 2px 2px #22222238;
 }
 
 .navbar .navbar-nav .nav-item{
