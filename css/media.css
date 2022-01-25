@@ -56,4 +56,41 @@
       margin-top: 2rem;
       width: 100%;
   }
+  .about .about_main{
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  .about .about_main .left{
+    width: 100%;
+  }
+  .about .about_main .right{
+    width: 100%;
+  }
+  .about .about_main .left img:nth-child(2){
+    top: 50px;
+    left: 300px;
+  }
+  
+}
+
+
+@media (max-width:468px){
+  .about .about_main .left img:nth-child(2){
+    top: 35px;
+    left: 160px;
+  }
+  .service .service_container .service_item{
+    width: 100%;
+  }
+  .webseminar .wrap_file{
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .webseminar .wrap_file .left{
+    width: 100%;
+  }
+  .webseminar .wrap_file .right{
+    width: 100%;
+    margin-left: 0;
+  }
 }
