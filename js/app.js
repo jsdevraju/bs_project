@@ -26,45 +26,33 @@ overlay.addEventListener('click', () =>{
     searchFeild.classList.remove('show')
 })
 
-const changeSlider = () =>{
-    testimonial_main.forEach((slide, index) =>{
-        if(slide.classList.contains('active')) current = index
-    })
-    testimonial_main[current].classList.remove('active');
-    if(current === (testimonial_main.length -1)) testimonial_main[0].classList.add('active');
-    else testimonial_main[current + 1].classList.add('active')
-}
 
-
-let interval = setInterval(changeSlider, 3000)
-
-prev.addEventListener('click', () =>{
-    clearInterval(interval)
-    testimonial_main[current].classList.remove('active')
-
-    if(current === 0) {
-        testimonial_main[testimonial_main.length - 1].classList.add('active')
-        current = testimonial_main.length - 1
-    }
-    else {
-        testimonial_main[current - 1].classList.add('active')
-        current = current - 1
-    }
-    interval = setInterval(changeSlider, 5000)
-})
-
-
-next.addEventListener('click', () =>{
-    clearInterval(interval)
-    testimonial_main[current].classList.remove('active')
-
-    if(current === (testimonial_main.length - 1)) {
-        testimonial_main[0].classList.add('active')
-        current = 0
-    }
-    else {
-        testimonial_main[current + 1].classList.add('active')
-        current = current + 1
-    }
-    interval = setInterval(changeSlider, 5000)
-})
+// slick slider
+$(".your-class").slick({
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    autoplay: {
+      delay: 3000,
+    },
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+    ],
+  });
+  
